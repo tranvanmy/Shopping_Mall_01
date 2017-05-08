@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '1911052735798387',
+        'client_secret' => '4c5d7d03e046853d8529cad32560ef41',
+        'redirect' => 'http://localhost/www/Project_new/Shopping_Mall_01/callback',
+    ],
 ];
