@@ -15,7 +15,19 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'id',
+        'name',
+        'Full_name',
+        'Auth_key',
+        'email',
+        'Phone',
+        'Address',
+        'Level',
+        'Status',
+        'Striper_id',
+        'Card_brand',
+        'Card_last_four',
+        'facebook_id',
     ];
 
     /**
@@ -24,6 +36,27 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+    public function like()
+    {
+        return $this->hasMany('App\Like');
+    }
+
+    public function comment()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function subscription()
+    {
+        return $this->hasMany('App\subscription');
+    }
+
+    public function wishlist()
+    {
+        return $this->hasMany('App\Wishlist');
+    }
 }
