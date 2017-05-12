@@ -11,11 +11,12 @@ class Categories extends Model
         'parent_id',
         'status',
     ];
-
+  
     public $timestamps = true;
 
     public function banner()
     {
         return $this -> hasMany(Banner::class);
+
     }
 }
