@@ -17,6 +17,5 @@ class Categories extends Model
     public function banner()
     {
         return $this -> hasMany(Banner::class);
-
     }
 }
