@@ -50,12 +50,12 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-    public function subscription()
+    public function subCriptions()
     {
         return $this->hasMany(Subscription::class);
     }
 
-    public function wishlist()
+    public function wishList()
     {
         return $this->hasMany(Wishlist::class);
     }

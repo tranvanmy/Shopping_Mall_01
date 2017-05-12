@@ -13,7 +13,7 @@ class Colors extends Model
     ];
     public $timestamps = true;
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

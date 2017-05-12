@@ -14,8 +14,8 @@ class Categories extends Model
 
     public $timestamps = true;
 
-    public function banner()
+    public function banners()
     {
-        return $this -> hasMany(Banner::class);
+        return $this->hasMany(Banner::class);
     }
 }

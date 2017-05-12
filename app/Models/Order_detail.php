@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order_detail extends Model
 {
-    protected $table = 'order_details';
-
     protected $filltable = [
         'id',
         'order_id',
@@ -24,7 +22,7 @@ class Order_detail extends Model
         return $this->belongTo(Order::class);
     }
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

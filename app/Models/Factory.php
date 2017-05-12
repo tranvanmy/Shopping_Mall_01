@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Factory extends Model
 {
-    protected $table = 'factories';
-
     protected $filltable = [
         'id',
         'factory_name',
@@ -17,7 +15,7 @@ class Factory extends Model
 
     public $timestamp = false;
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

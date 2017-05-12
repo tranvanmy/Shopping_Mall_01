@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Deliver extends Model
 {
-    protected $table = 'delivers';
-
     protected $filltable = [
         'id',
         'deliver_name',
@@ -16,7 +14,7 @@ class Deliver extends Model
 
     public $timestamp = false;
 
-    public function order()
+    public function orders()
     {
         return $this->hasMany(Order::class);
     }

@@ -54,9 +54,9 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
 
-        $rememeber = $request -> input('Remember');
+        $rememeber = $request->input('Remember');
         if (Auth::attempt($auth, $rememeber)) {
-            if ((Auth::user()->Level)==1) {
+            if ((Auth::user()->Level) == 1) {
                 return redirect('backend/index');
             } else {
                 Auth::user()->Full_name;
@@ -72,7 +72,6 @@ class LoginController extends Controller
         Auth::logout();
         return view('auth.login');
     }
-
     /**
      * Redirect the user to the GitHub authentication page.
      *
@@ -82,7 +81,6 @@ class LoginController extends Controller
     {
         return Socialite::driver('facebook')->redirect();
     }
-
     /**
      * Obtain the user information from GitHub.
      *
@@ -95,14 +93,11 @@ class LoginController extends Controller
         } catch (Exception $e) {
             return redirect('authentication/getLogin');
         }
-        
-        
         $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
  
         return redirect()->to('home');
     }
-
     /**
      * Return user if exists; create and return if doesn't
      *

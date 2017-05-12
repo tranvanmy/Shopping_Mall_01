@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $table = 'orders';
-
     protected $filltable = [
        'id',
        'user_id',
@@ -25,7 +23,7 @@ class Order extends Model
 
     public $timestamp = true;
 
-    public function orderdetail()
+    public function orderDetails()
     {
         return $this->hasMany(Order_detail::class);
     }
@@ -35,7 +33,7 @@ class Order extends Model
         return $this->belongTo(Payment::class);
     }
 
-    public function subcription()
+    public function subCriptions()
     {
         return $this->hasMany(Subcription::class);
     }

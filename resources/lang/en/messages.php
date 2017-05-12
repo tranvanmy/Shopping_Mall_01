@@ -10,4 +10,6 @@
        'password' => 'Password',
        'comfirm_password' => 'Confirm Password',
        'mess' => 'Tài khoản và mật khẩu không đúng xin mời bạn nhập lại!',
+       'Vuilongnhapgmail' => 'Vui lòng nhập gmail!',
+       'Vuilongnhappass' => 'Vui lòng nhập PassWord!',
     ];

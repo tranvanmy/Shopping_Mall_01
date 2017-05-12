@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $table = 'products';
-    
     protected $data = [
         'create_at',
         'update_at'
@@ -53,22 +51,22 @@ class Product extends Model
         return $this->belongTo(Factory::class);
     }
 
-    public function comment()
+    public function comments()
     {
         return $this->hasMany(Comment::class);
     }
 
-    public function rank()
+    public function ranks()
     {
         return $this->hasMany(Rank::class);
     }
 
-    public function orderdetail()
+    public function orderDetails()
     {
         return $this->hasMany(Order_detail::class);
     }
 
-    public function wishlist()
+    public function wishLists()
     {
         return $this->hasMany(Wishlist::class);
     }

@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wishlist extends Model
 {
-    protected $table = 'wishlists';
-
     protected $filltable =
     [
         'id',
@@ -17,7 +15,7 @@ class Wishlist extends Model
 
     public $timestamp = true;
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

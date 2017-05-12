@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rate extends Model
 {
-    protected $table = 'rates';
-
     protected $filltable = [
         'id',
         'product_id',
@@ -22,7 +20,7 @@ class Rate extends Model
         return $this->belongTo(User::class);
     }
 
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

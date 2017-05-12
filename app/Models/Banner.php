@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Banner extends Model
 {
-    protected $table = 'banners';
-
     protected $filltable = [
         'id',
         'title_1',
@@ -20,7 +18,7 @@ class Banner extends Model
 
     public $timestamp = false;
 
-    public function cate()
+    public function caterory()
     {
         return $this->belongTo(Category::class);
     }

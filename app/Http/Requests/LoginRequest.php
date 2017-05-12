@@ -32,8 +32,8 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-           'email.required' => 'Vui lòng nhập gmail!',
-           'password.required' => 'Vui lòng nhập PassWord!',
+           'email.required' =>  trans('messages.Vuilongnhapgmail'),
+           'password.required' =>  trans('messages.Vuilongnhappass'),
         ];
     }
 }

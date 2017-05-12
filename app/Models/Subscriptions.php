@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subscriptions extends Model
 {
-    protected $table = 'subscriptions';
-
     protected $filltable = [
         'id',
         'user_id',
@@ -19,7 +17,7 @@ class Subscriptions extends Model
 
     public $timestamp = false;
 
-    public function order()
+    public function orders()
     {
         return $this->hasMany(Order::class);
     }
